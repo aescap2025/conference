@@ -140,6 +140,57 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .register-container {
+                text-align: center;
+                padding-right: 0;
+                margin-top: 10px;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar h2 {
+                font-size: 18px;
+            }
+
+            .sidebar h3 {
+                font-size: 16px;
+            }
+
+            .register-btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .content h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
