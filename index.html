@@ -139,56 +139,44 @@
 
     .dropdown:hover .dropdown-content {
         display: block;
-    }
+    }.menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            z-index: 1001;
+            background: white;
+            border-radius: 50%;
+            padding: 8px;
+        }
+
+        /* Mobile Styles */
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
+            .sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                width: 250px;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to bottom right, rgb(29, 20, 81), rgb(53, 2, 55));
+                transition: transform 0.3s ease-in-out;
+                z-index: 1000;
             }
 
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                text-align: center;
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .menu-icon {
+                display: block;
             }
 
             .content {
                 margin-left: 0;
-                padding: 10px;
-            }
-
-            .register-container {
-                text-align: center;
-                padding-right: 0;
-                margin-top: 10px;
-            }
-
-            .cards {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .sidebar h2 {
-                font-size: 18px;
-            }
-
-            .sidebar h3 {
-                font-size: 16px;
-            }
-
-            .register-btn {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-
-            .content h1 {
-                font-size: 22px;
-            }
-
-            p {
-                font-size: 16px;
+                padding: 20px;
             }
         }
     </style>
